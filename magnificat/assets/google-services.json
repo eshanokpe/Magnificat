@@ -1,0 +1,155 @@
+{
+  "project_info": {
+    "project_number": "164882268808",
+    "firebase_url": "https://sdride-8b25f.firebaseio.com",
+    "project_id": "sdride-8b25f",
+    "storage_bucket": "sdride-8b25f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164882268808:android:3d16d883752d353823953d",
+        "android_client_info": {
+          "package_name": "com.driver.sdridetaxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164882268808-4gncnodm6cv0b7n64d3g3ktcvu9323qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk-_SOBEuUWRxoXBQdnMeAQncmBaRi244"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164882268808-4gncnodm6cv0b7n64d3g3ktcvu9323qr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "164882268808-csfq7fhkfurevhf1h11tlh6oko2e8p6v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sdride.dev"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164882268808:android:f24392f01ef089f623953d",
+        "android_client_info": {
+          "package_name": "com.it.sdridetaxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164882268808-9ilec1405b7p1v8qcuit31kd091vpiuu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.it.sdridetaxi",
+            "certificate_hash": "6bcc1f80f59cbc21218fa3c5e727a4e7459e99c5"
+          }
+        },
+        {
+          "client_id": "164882268808-cjpngr63e3rs3aouv3eavhqu9mthfvv1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.it.sdridetaxi",
+            "certificate_hash": "9a9db726bd67233e707d575d24af1891a0f03e7b"
+          }
+        },
+        {
+          "client_id": "164882268808-dpc565rat97sik1orb9qtedqhob7pdr6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.it.sdridetaxi",
+            "certificate_hash": "6f3635bb12f21b4eab86e83c17d0b1f769f11287"
+          }
+        },
+        {
+          "client_id": "164882268808-hlouupkt5ur382gqrp50to7kkd5qjr9i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.it.sdridetaxi",
+            "certificate_hash": "363d9fe491bddd79d667eeafccbb0da5a47a0007"
+          }
+        },
+        {
+          "client_id": "164882268808-i8h0p4hhuh925us2sp82is9jtn22m51n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.it.sdridetaxi",
+            "certificate_hash": "2231bbc84efb7a14f1f820d61538322e6b0d0421"
+          }
+        },
+        {
+          "client_id": "164882268808-l9dd0g5o6it9lbog3k7mnbeb7qeunl4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.it.sdridetaxi",
+            "certificate_hash": "6e9f25f5e199b1d34979dfe41023953fda9f76e8"
+          }
+        },
+        {
+          "client_id": "164882268808-nb1a90sk0v24u2uq6aaj55tv9hph0405.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.it.sdridetaxi",
+            "certificate_hash": "9c5d156fb1cdefccf88753f781e8ab4c42bc11ee"
+          }
+        },
+        {
+          "client_id": "164882268808-ts55savh87n91409bml3dk1fj8pgdpfr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.it.sdridetaxi",
+            "certificate_hash": "3301b61f89578d254174acd5a158f4f72e17656f"
+          }
+        },
+        {
+          "client_id": "164882268808-vh793dur2v93jcck3bf3vlt6ro3gb1er.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.it.sdridetaxi",
+            "certificate_hash": "bc3823cf82ebe98cc4ff98ef0fa4a02f8d8a4f28"
+          }
+        },
+        {
+          "client_id": "164882268808-4gncnodm6cv0b7n64d3g3ktcvu9323qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk-_SOBEuUWRxoXBQdnMeAQncmBaRi244"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164882268808-4gncnodm6cv0b7n64d3g3ktcvu9323qr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "164882268808-csfq7fhkfurevhf1h11tlh6oko2e8p6v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sdride.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

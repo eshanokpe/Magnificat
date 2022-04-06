@@ -1,0 +1,441 @@
+                                        SDRIDE API DOCUMENTATION FOR PROVIDER
+                                        
+                                        
+      /* GENERAL  */
+      
+  Base Url : sdride.org/public/provider/pauth/
+  
+  NOTE: ALL ENDPOINT WITH  '/provider' prefix after {base_url} would require authentication,you are to pass variable {token} when accessing those endpoints.if the request method is "POST" you would pass it in the body param.if it is in the "GET" request method you would pass as query parameter.
+
+   /*  REGISTER */
+   
+   End Point: {base_url}/register
+   
+   Request Method: POST
+   
+   Paramters: device_id,device_type,device_token,first_name,email,mobile,password
+   
+   Note:This Enpoint is use to register a provider/rider.
+   
+     /*  CHECK EMAIL */
+  
+  End Point: {base_url}/check-email
+   
+   Request Method: POST
+   
+   Paramters: email
+  
+  Note: This endpoint is use to check is a email have not been used to register before
+  
+   
+  /*  CHECK MOBILE */
+  
+  End Point: {base_url}/check-mobile
+   
+   Request Method: POST
+   
+   Paramters: mobile
+  
+  Note: This endpoint is use to check is a mobile number have not been used to register before
+  
+  
+    /*  LOGIN */
+  
+  End Point: {base_url}/oauth/token
+   
+   Request Method: POST
+   
+   Paramters: device_id,device_type,device_token,email,password
+
+
+  Note: This endpoint is use to login user,it would return a token.this token should be stored as it would be used to access some endpoint require authentication
+  
+   /*  LOGOUT */
+  
+  End Point: {base_url}/logout
+   
+   Request Method: POST
+   
+   Paramters: token
+
+
+  Note: This endpoint is use to logout user,the token that was given to you after user logged in is the only required parameter.
+  
+  
+   /*  FORGOTTEN PASSWORD */
+  
+  End Point: {base_url}/forgot/password
+   
+   Request Method: POST
+   
+   Paramters: email
+
+
+  Note: once email is password to this endpoint,otp(one time password) would be sent to the use email,if user email exist.
+  
+   /*  RESET PASSWORD */
+  
+  End Point: {base_url}/reset/password
+   
+   Request Method: POST
+   
+   Paramters: email,password,otp
+
+
+  Note: this endpoint is used to reset user password,once the email and the otp gotten "forgotten password" endpoint,the password would be reset with the one you passed in the paramter.
+  
+  
+     /*  UPLOAD DOCUMENT */
+  
+  End Point: {base_url}/document/upload
+   
+   Request Method: POST
+   
+   Paramters: document,document_id,token,expires_at
+
+
+NOTE:This endpoint is used to upload document,the {document} parameter is the document you want to upload it can be in { jpg,jpeg,png,pdf } formats only,while the { document_id} is a unique id you generate for the document it must be in { numeric } format only,while the {token} variable is the token generated for you after user logged in and the {expires_at} variable is the time the document should expire can it time/date format.
+
+
+     /*  REVIEWS */
+  
+  End Point: {base_url}/provider/review
+   
+   Request Method: POST
+   
+   Parameter : provider_id
+   
+NOTE:Get List of reviews for specific provider.
+
+
+  /*  Add Notification */
+  
+  End Point: {base_url}/provider/addNotification
+   
+   Request Method: POST
+   
+   ParameterS:  type
+		title
+		notification_text
+
+
+ NOTE:Enpoint use to add notification.
+
+	/*  Notifications */
+	  
+	  End Point: {base_url}/provider/addNotification
+	   
+	   Request Method: GET
+	   
+	NOTE:Get Lists of all your notifications.
+
+
+
+	/*  Check Document */
+	  
+	  End Point: {base_url}/provider/document/checkDocument
+	   
+	   Request Method: GET
+	   
+	NOTE:Get Lists of all provider document.
+
+
+	
+	
+  	  /* Document Status */ 
+	   
+	  End Point: {base_url}/provider/document/status
+	   
+	   Request Method: GET
+	   
+	NOTE:Check Provider Document status.
+	
+	
+               /* Profile */ 
+	  
+	  End Point: {base_url}/provider/profile
+	   
+	   Request Method: GET
+	   
+	NOTE:Check Profile Details.
+	
+	
+	               /* Update Profile */ 
+	  
+	  End Point: {base_url}/provider/profile
+	   
+	   Request Method: POST
+	   
+	   Parameters : first_name
+			mobile
+			avatar { can only be in jpeg,bmp,png format only }
+			language 
+			address
+			address_secondary
+			city
+			country
+			postal_code
+			description
+	   
+	NOTE:Update profile details.All values of the parameter must not be greater than 255 characters.
+	
+	
+	   /* CHANGE PASSWORD */ 
+	  
+	  End Point: {base_url}/provider/password
+	   
+	   Request Method: POST
+	   
+          Parameters :password
+		       password_old
+	
+       NOTE: This endpoint is use to change provider password.
+       
+        /* CHANGE LOCATION */ 
+	  
+	  End Point: {base_url}/provider/location
+	   
+	   Request Method: POST
+	   Parameter: latitude
+                      longitude
+	   
+	NOTE:This endpoint is use to change provider location.
+	
+	
+	/* SET AVAILABILITY */ 
+	  
+	  End Point: {base_url}/provider/available
+	   
+	   Request Method: POST
+	   
+	   Parameter : service_status { the value can only be "active,offline" }
+	   
+	NOTE:This endpoint is used to set availability of a provider. 
+
+
+       /* TARGET */ 
+	  
+	  End Point: {base_url}/provider/target
+	   
+	   Request Method: GET
+	   
+	NOTE:This endpoint is use to get lists of completed rides and target amount earned by the provider.
+	
+	  /* TARGET */ 
+	  
+	  End Point: {base_url}/provider/target
+	   
+	   Request Method: GET
+	   
+	NOTE:This endpoint is use to get lists of completed rides and target amount earned by the provider.
+
+  
+        /* CANCEL REQUEST */ 
+	  
+	  End Point: {base_url}/provider/cancel
+	   
+	   Request Method: POST
+	   
+	   Parameters : cancel_reason,request_id
+	   
+	NOTE:This endpoint is use to cancel ride by provider.
+
+
+       /* SUMMARY */ 
+	  
+	  End Point: {base_url}/provider/summary
+	   
+	   Request Method: POST
+	   
+	NOTE:This endpoint is use to get lists of rides,cancelled rides,revenue,scheduled ride.
+
+
+         /* HELP */ 
+	  
+	  End Point: {base_url}/provider/help
+	   
+	   Request Method: GET
+	   
+	NOTE:This endpoint is use to get help details.
+
+      
+       /* VERFIFY OTP */ 
+	  
+	  End Point: {base_url}/provider/verifyotp
+	   
+	   Request Method: POST
+	   
+	   Parameter : request_id
+                       otp
+   
+	NOTE:This endpoint is use to verify otp,after a ride is been booked by user and he/she is given otp,the provider can validate the otp using this endpoint.
+	
+	      /* ACCEPT TRIP */ 
+	  
+	  End Point: {base_url}/provider/trip/{id}
+	   
+	   Request Method: POST
+	   
+   
+	NOTE:This endpoint is use to accept ride request placed by user to a provide.the parameter {id} in the is the request id of the trip.
+	
+	      /* RATE TRIP */ 
+	  
+	  End Point: {base_url}/provider/trip/{id}/rate
+	   
+	   Request Method: POST
+	   
+	   Parameter : rating
+                       comment
+                          
+	NOTE:This endpoint is use by provider to rate user user request,the parameter {id} in the is the request id of the trip.
+	
+	
+	  /* RATE TRIP */ 
+	  
+	  End Point: {base_url}/provider/trip/{id}/rate
+	   
+	   Request Method: POST
+	   
+	   Parameter : rating
+		       comment
+			  
+	NOTE:This endpoint is use by provider to rate user user request,the parameter {id} in the is the request id of the trip.
+	
+	
+		  /* UPCOMING REQUESTS */ 
+	  
+	  End Point: {base_url}/provider/requests/upcoming
+	   
+	   Request Method: GET
+	   
+
+	NOTE:This endpoint is use by to lists of scheduled trips available for the provider.
+	
+           	  /* REQUEST HISTORY */ 
+	  
+	  End Point: {base_url}/provider/requests/history
+	   
+	   Request Method: GET
+	     
+	NOTE:This endpoint is use to get list of all your requests.
+	
+	
+		  /* REQUEST HISTORY DETAILS */ 
+	  
+	  End Point: {base_url}/provider/requests/history/details
+	   
+	   Request Method: GET
+	   
+	   Parameter : request_id
+	   		  
+	NOTE:This endpoint is use to get details of old requests .
+	
+	
+		  /* UPCOMING REQUESTS DETAILS */ 
+	  
+	  End Point: {base_url}/provider/requests/upcoming/details
+	   
+	   Request Method: GET
+	   
+	   Parameter : request_id
+	   	  
+	NOTE:This endpoint is use by to details of scheduled trips.
+
+
+          /* ADD BANK */ 
+	  
+	  End Point: {base_url}/provider/addBank
+	   
+	   Request Method: GET
+	   
+	   Parameters : account_name
+			account_number
+			routing_number
+			country
+			currency
+			bank_name
+			type
+			provider_id
+	   
+	     	  
+	NOTE:This endpoint is use to add bank account for provider.
+	
+	
+	  /* WITHDRAW LIST */ 
+	  
+	  End Point: {base_url}/provider/withdrawaList
+	   
+	   Request Method: GET
+	   
+	   Parameter : request_id
+	   	  
+	NOTE:This endpoint is use to show lists of withdraws the provider have requested for.
+	
+	
+	  /* REQUEST WITHDRAW */ 
+	  
+	  End Point: {base_url}/provider/withdrawalRequest
+	   
+	   Request Method: GET
+	   
+	   Parameters : provider_id
+			bank_account_id
+			amount
+	   	  
+	NOTE:This endpoint is use to request withdraw.the parameter {bank_account_id} is id of bank account you can get that "bank list endpoint".
+	
+	
+	  /* BANK LIST */ 
+	  
+	  End Point: {base_url}/provider/BankList
+	   
+	   Request Method: GET
+	   	  
+	NOTE:This endpoint is use to get lists of bank accounts for provider.
+	
+
+  	  /* GET CHART */ 
+	  
+	  End Point: {base_url}/provider/firebase/getChat
+	   
+	   Request Method: GET
+	   
+	   Parameter: request_id
+	   	  
+	NOTE:This endpoint is use to get lists of bank accounts for provider.
+  
+    	  /* CHART HISTORY */ 
+	  
+	  End Point: {base_url}/provider/firebase/chatHistory
+	   
+	   Request Method: GET
+	   	  
+	NOTE:This endpoint is use to get chart history of a provider.
+	
+
+ 	  /* DOCUMENT STATUS */ 
+	  
+	  End Point: {base_url}/provider/document/status
+	   
+	   Request Method: GET
+	   	  
+	NOTE:This endpoint is use to document status of a provider.
+	
+	
+	 	  /* DOCUMENT TYPES */ 
+	  
+	  End Point: {base_url}/provider/document/types
+	   
+	   Request Method: GET
+	   	  
+	NOTE:This endpoint is use to get document type of a provider.
+	
+  
+  
+  
+  
+    
+                                        
+                                        
+                                        
